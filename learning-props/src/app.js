@@ -1,10 +1,18 @@
 'use strict'
 
 import React from 'react'
+import title from './title'
+import Title from './title'
 
 const App = React.createClass({
     render: function(){
-        return <h1>Aplicação</h1>
+        return (
+        <div className='container'>
+            <Title name = 'narcizo' lastname='garbiel' />
+            <label htmlFor='input'>Input</label>
+            <input type='text' id='input'/>
+        </div>
+        )
     }
 })
 
