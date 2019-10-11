@@ -1,0 +1,19 @@
+npm install --save-dev webpack@1
+
+sudo npm install -g webpack@1
+
+npm install --save-dev webpack-dev-server@1
+
+sudo npm install -g webpack-dev-server@1
+
+npm install --save react@15.4 react-dom@15.4
+
+npm install --save-dev babel-core@6 babel-loader@6 babel-preset-es2015@6 babel-preset-stage-0@6
+
+npm install --save-dev babel-preset-react@6
+
+npm install --save-dev react-hot-loader@3.0.0-beta.2
+
+npm install --save-dev standard standard-loader@4
+
+npm install --save-dev webpack-validator
