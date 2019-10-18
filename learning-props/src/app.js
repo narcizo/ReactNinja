@@ -1,41 +1,36 @@
 'use strict'
 
 import React, { Component } from 'react'
-import Title from './title'
 import Square from './square'
 import Button from './button'
-import LikeButton from './like-button'
+import Timer from './timer'
 
 class App extends Component{
     constructor(){
+        console.log('constructor')
         super()
-        // único momento em que se seta o state inicial
         this.state = {
-            text: 'Narcizo'
+            color: 'green',
+            showTimer: true
         }
     }
+
+    componentWillMount(){
+        console.log('componentWillMount')
+    }
+
+    componentDidMount(){
+        console.log('componentDidMount')
+    }
+
     render (){
+        console.log('render')
         return(
-            <div className='container' onClick={() => this.setState({
-                text: 'Outro texto'
-            })}>
-                {this.state.text}
+            <div>
+                {this.state.showTimer && <Timer />}
+                <button onClick={() => this.setState({showTimer: !this.state.showTimer})}>show/hide Timer</button>
             </div>
         )
-        // return(
-        //     <div>
-        //         <div className='container' onClick={(e) => {
-        //             alert('clicou')
-        //         }}>
-        //             {['blue', 'red', 'green'].map((square, index) => (
-        //                 <Square key = {index} color = {square} />
-        //             ))}
-        //         </div>
-        //         <div className='container'>
-        //             <LikeButton/>
-        //         </div>
-        //     </div>
-        // )
     }
 }
 
