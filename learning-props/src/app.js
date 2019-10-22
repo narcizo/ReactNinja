@@ -10,25 +10,28 @@ class App extends Component{
         console.log('constructor')
         super()
         this.state = {
+            time: 0,
             color: 'green',
             showTimer: true
         }
     }
 
     componentWillMount(){
-        console.log('componentWillMount')
+        console.log('componentWillMount app')
     }
 
     componentDidMount(){
-        console.log('componentDidMount')
+        console.log('componentDidMount app')
     }
 
     render (){
-        console.log('render')
+        console.log('render app')
         return(
             <div>
-                {this.state.showTimer && <Timer />}
-                <button onClick={() => this.setState({showTimer: !this.state.showTimer})}>show/hide Timer</button>
+                <button onClick={() => {
+                    this.setState({time: this.state.time + 10 })
+                }}>Change Props</button>
+                <Timer time={this.state.time}/>
             </div>
         )
     }
